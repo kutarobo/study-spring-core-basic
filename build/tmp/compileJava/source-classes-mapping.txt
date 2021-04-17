@@ -1,0 +1,2 @@
+study/spring/core/basic/hello/HelloApplication.java
+ study.spring.core.basic.hello.HelloApplication
