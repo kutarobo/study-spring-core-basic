@@ -1,14 +1,14 @@
 package study.spring.core.basic.hello;
 
-import study.spring.core.basic.hello.service.MemberService;
-import study.spring.core.basic.hello.service.MemberServiceImpl;
 import study.spring.core.basic.hello.member.Grade;
 import study.spring.core.basic.hello.member.Member;
+import study.spring.core.basic.hello.member.MemberService;
 
 public class MemberApp {
 
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
 
