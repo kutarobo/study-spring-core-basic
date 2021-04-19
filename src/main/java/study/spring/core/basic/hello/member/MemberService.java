@@ -1,4 +1,4 @@
-package study.spring.core.basic.hello.service;
+package study.spring.core.basic.hello.member;
 
 import study.spring.core.basic.hello.member.Member;
 
