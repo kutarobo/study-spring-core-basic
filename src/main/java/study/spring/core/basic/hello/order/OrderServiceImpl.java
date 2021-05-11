@@ -2,6 +2,8 @@ package study.spring.core.basic.hello.order;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import study.spring.core.basic.hello.annotation.MainDiscountPolicy;
 import study.spring.core.basic.hello.discount.DiscountPolicy;
 import study.spring.core.basic.hello.member.Member;
 import study.spring.core.basic.hello.member.MemberRepository;
@@ -13,7 +15,7 @@ public class OrderServiceImpl implements OrderService {
     private final DiscountPolicy discountPolicy;
 
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
